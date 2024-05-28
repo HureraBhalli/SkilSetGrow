@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:skill_set_grow/OnBoarding/Boarding-I.dart';
+import 'package:skill_set_grow/OnBoarding/Boarding-IV.dart';
 
 
 
@@ -52,7 +53,7 @@ class Boarding3 extends StatelessWidget {
             child: GestureDetector(
               onTap: () {
                 Navigator.of(context).push(PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => Boarding1(),
+                  pageBuilder: (context, animation, secondaryAnimation) => Boarding4(),
                   transitionDuration: Duration(milliseconds: 120),
                   reverseTransitionDuration: Duration(milliseconds: 120),
                   transitionsBuilder: (context, animation, secondaryAnimation, child) {

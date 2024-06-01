@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:skill_set_grow/Trainee/SignUp/LoginSignUp.dart';
 
 
 
@@ -55,7 +56,7 @@ class Boarding4 extends StatelessWidget {
                   child: Container(
                     width: double.infinity, // Expand width to full screen width
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.8),
+                      color: Colors.white.withOpacity(0.9),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30.0),
                         topRight: Radius.circular(30.0),
@@ -71,18 +72,18 @@ class Boarding4 extends StatelessWidget {
                       child: Column(
 
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Image.asset('assets/pictures/Logo1.png'),
 
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
 
-                          Text('Choose the Account Type', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 18)),
+                          const Text('Choose the Account Type', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 18)),
 
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
 
@@ -90,7 +91,7 @@ class Boarding4 extends StatelessWidget {
                           Text('You have to select one of the option for the registration.', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Colors.black),),
 
 
-                          SizedBox(
+                          const SizedBox(
                             height: 35,
                           ),
 
@@ -100,7 +101,25 @@ class Boarding4 extends StatelessWidget {
                             width: double.infinity,
                             height: 55,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.of(context).push(PageRouteBuilder(
+                                  pageBuilder: (context, animation, secondaryAnimation) => LoginSignUp(),
+                                  transitionDuration: Duration(milliseconds: 120),
+                                  reverseTransitionDuration: Duration(milliseconds: 120),
+                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                    // Your existing transition if you still want to apply it
+                                    var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                                        .animate(CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut));
+                                    return ScaleTransition(
+                                      scale: scaleTween,
+                                      child: child,
+                                    );
+                                  },
+                                ));
+                              },
+
+
+
                               style: ElevatedButton.styleFrom(
                                 padding: EdgeInsets.all(16),
                                 shape: RoundedRectangleBorder(
@@ -115,14 +134,19 @@ class Boarding4 extends StatelessWidget {
                           ),
 
 
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
 
                           // Button 2
                           Container(
                             width: double.infinity,
                             height: 55,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+
+                              },
+
+
+
                               style: ElevatedButton.styleFrom(
                                 padding: EdgeInsets.all(16),
                                 shape: RoundedRectangleBorder(

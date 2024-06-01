@@ -18,28 +18,25 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8),
-      child: InkWell(
-        onTap: onpress,
-        child: Container(
-          height: 60,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color(0xff6763EE).withOpacity(0.7), // Red with 67% opacity
-                Color(0xff6763EE).withOpacity(1), // Blue with 67% opacity
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-
-            borderRadius: BorderRadius.circular(20),
-            // color: color,
+    return InkWell(
+      onTap: onpress,
+      child: Container(
+        height: 60,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xff2B3445).withOpacity(0.9), // Red with 67% opacity
+              Color(0xff2B3445).withOpacity(1), // Blue with 67% opacity
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
-          child: Center(child: Text(title, style: TextStyle(fontFamily: 'Poppins SemiBold', fontSize: 16, color: Colors.white),)),
+
+          borderRadius: BorderRadius.circular(20),
+          // color: color,
         ),
+        child: Center(child: Text(title, style: TextStyle(fontFamily: 'Poppins SemiBold', fontSize: 16, color: Colors.white),)),
       ),
     );
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:skill_set_grow/Components/MyButton.dart';
+import 'package:skill_set_grow/Trainee/SignUp/SignUp-II.dart';
 
 
 
@@ -74,7 +76,7 @@ class SignUp1 extends StatelessWidget {
 
 
 
-                        const Text('Hey, ', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 18)),
+                        const Text('Account Information, ', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 18)),
 
                         const SizedBox(
                           height: 10,
@@ -107,7 +109,42 @@ class SignUp1 extends StatelessWidget {
                                child: SvgPicture.asset('assets/Icons/Username.svg'),
                                // child: Image.asset('assets/Icons/Username.svg', width: 24, height: 24,),
                               ),
-                              labelText: 'Upload vehicle photos',
+                              labelText: 'Enter your name',
+                              labelStyle: TextStyle(
+                                  fontFamily: 'Poppins Regular',
+                                  fontSize: 14,
+                                  color: Color(0xff000200).withOpacity(0.7)),
+                            ),
+                          ),
+                        ),
+
+
+                        const SizedBox(
+                            height: 10
+                        ),
+
+
+
+                        Container(
+                          height: 60,
+                          child: TextField(
+                            decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Color(0xffFAFAFA),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(14.0),
+                                borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                              ),
+                              focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
+                                borderRadius: BorderRadius.circular(14.0),
+                                borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
+                              ),
+                              prefixIcon: Padding(
+                                padding: const EdgeInsets.only(left: 18.0, right: 12),
+                                child: SvgPicture.asset('assets/Icons/Email.svg'),
+                                // child: Image.asset('assets/Icons/Username.svg', width: 24, height: 24,),
+                              ),
+                              labelText: 'Enter your email',
                               labelStyle: TextStyle(
                                   fontFamily: 'Poppins Regular',
                                   fontSize: 14,
@@ -124,34 +161,114 @@ class SignUp1 extends StatelessWidget {
 
 
 
-                        // Button 2
+
                         Container(
-                          width: double.infinity,
-                          height: 55,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              padding: EdgeInsets.all(16),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
+                          height: 60,
+                          child: TextField(
+                            decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Color(0xffFAFAFA),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(14.0),
+                                borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
                               ),
-                              backgroundColor: Color(0xffEBF2FA),
-                              elevation: 0,
-                              side: BorderSide(width: 1, color: Color(0xff000000).withOpacity(0.3)),
+                              focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
+                                borderRadius: BorderRadius.circular(14.0),
+                                borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
+                              ),
+                              prefixIcon: Padding(
+                                padding: const EdgeInsets.only(left: 18.0, right: 12),
+                                child: SvgPicture.asset('assets/Icons/Password.svg'),
+                                // child: Image.asset('assets/Icons/Username.svg', width: 24, height: 24,),
+                              ),
+                              labelText: 'Enter your password',
+                              labelStyle: TextStyle(
+                                  fontFamily: 'Poppins Regular',
+                                  fontSize: 14,
+                                  color: Color(0xff000200).withOpacity(0.7)),
                             ),
-                            child:  const Text( 'Already have an account', style: TextStyle( fontFamily: 'Poppins Medium', fontSize: 14, color: Colors.black,),),
                           ),
+                        ),
+
+
+                        const SizedBox(
+                            height: 10
                         ),
 
 
 
 
-                        SizedBox(height: 10),
-
-                        // Button 3
 
 
-                        MyButton(title: 'Sign Up', onpress: () {}),
+                        Container(
+                          height: 60,
+                          child: TextField(
+                            decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Color(0xffFAFAFA),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(14.0),
+                                borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                              ),
+                              focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
+                                borderRadius: BorderRadius.circular(14.0),
+                                borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
+                              ),
+                              prefixIcon: Padding(
+                                padding: const EdgeInsets.only(left: 18.0, right: 12),
+                                child: SvgPicture.asset('assets/Icons/Password.svg'),
+                                // child: Image.asset('assets/Icons/Username.svg', width: 24, height: 24,),
+                              ),
+                              labelText: 'Confirm your password',
+                              labelStyle: TextStyle(
+                                  fontFamily: 'Poppins Regular',
+                                  fontSize: 14,
+                                  color: Color(0xff000200).withOpacity(0.7)),
+                            ),
+                          ),
+                        ),
+
+
+                        const SizedBox(
+                            height: 10
+                        ),
+
+
+
+
+
+
+                        
+
+
+
+
+                        Spacer(flex: 3),
+
+
+                        // Button 1
+                        MyButton(title: 'Next', onpress: () {
+                          Navigator.of(context).push(PageRouteBuilder(
+                            pageBuilder: (context, animation, secondaryAnimation) => SignUp2(),
+                            transitionDuration: Duration(milliseconds: 120),
+                            reverseTransitionDuration: Duration(milliseconds: 120),
+                            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                              // Your existing transition if you still want to apply it
+                              var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                                  .animate(CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut));
+                              return ScaleTransition(
+                                scale: scaleTween,
+                                child: child,
+                              );
+                            },
+                          ));
+                        },
+                        ),
+
+
+
+
+                        Spacer(flex: 1),
                       ],
                     ),
                   ),

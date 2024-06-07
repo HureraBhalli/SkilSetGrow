@@ -37,6 +37,8 @@ class Boarding1 extends StatelessWidget {
               ),
             ],
           ),
+
+
           const Spacer(flex: 3),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,

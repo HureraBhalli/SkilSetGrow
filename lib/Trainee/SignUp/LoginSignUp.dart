@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:skill_set_grow/OnBoarding/Boarding-IV.dart';
+import 'package:skill_set_grow/Trainee/SignUp/Login.dart';
 import 'package:skill_set_grow/Trainee/SignUp/SignUp-I.dart';
 
 
@@ -139,12 +140,34 @@ class LoginSignUp extends StatelessWidget {
 
                         const SizedBox(height: 10),
 
+
+
+
                         // Button 2
                         Container(
                           width: double.infinity,
                           height: 55,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: ()  {
+                              Navigator.of(context).push(PageRouteBuilder(
+                                pageBuilder: (context, animation, secondaryAnimation) => LogIn(),
+                                transitionDuration: Duration(milliseconds: 120),
+                                reverseTransitionDuration: Duration(milliseconds: 120),
+                                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                  // Your existing transition if you still want to apply it
+                                  var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                                      .animate(CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut));
+                                  return ScaleTransition(
+                                    scale: scaleTween,
+                                    child: child,
+                                  );
+                                },
+                              ));
+                            },
+
+
+
+
                             style: ElevatedButton.styleFrom(
                               padding: EdgeInsets.all(16),
                               shape: RoundedRectangleBorder(
@@ -160,6 +183,7 @@ class LoginSignUp extends StatelessWidget {
                         SizedBox(height: 10),
 
                         // Button 3
+
 
 
 

@@ -55,7 +55,7 @@ class _LogInState extends State<LogIn> {
 
               // Adjust the height to match the image height
               Expanded(
-                flex: 1,
+                flex: 3,
                 child: Container(
                   width: double.infinity, // Expand width to full screen width
                   decoration: BoxDecoration(
@@ -177,12 +177,10 @@ class _LogInState extends State<LogIn> {
                         MyButton(title: 'Sign Up', onpress: () {}),
 
 
-                        Spacer(flex: 4),
+                        Spacer(flex: 1),
                       ],
                     ),
                   ),
-
-
 
 
 

@@ -67,6 +67,12 @@ flutter:
     - assets/pictures/Board1.png
     - assets/Icons/Username.svg
     - assets/Icons/Board1.svg
+    - assets/Icons/Home.svg
+    - assets/Icons/Messages.svg
+    - assets/Icons/Tasks.svg
+    - assets/Icons/Profile.svg
+    - assets/Icons/Line.svg
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -180,6 +180,7 @@ class LoginSignUp extends StatelessWidget {
                             child:  const Text( 'Already have an account', style: TextStyle( fontFamily: 'Poppins Medium', fontSize: 14, color: Colors.black,),),
                           ),
                         ),
+
                         SizedBox(height: 10),
 
                         // Button 3
